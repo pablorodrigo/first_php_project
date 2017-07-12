@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 16px;
+            font-family: 'Comic Sans MS', Helvetica, sans-serif;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            width: 551px;
+            -webkit-user-select: none;
+        }
+
+        td {
+            height: 175px;
+            width: 175px;
+            text-align: center;
+            font-size: 120px;
+            border: 2px solid #cccccc;
+            -webkit-border-radius: 10px;
+        }
+
+        #players {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 10px 10px 10px;
+            width: 511px;
+            text-align: left;
+        }
+
+        #players > div {
+            display: inline-block;
+            padding-right: 25px;
+            color: #cccccc;
+            -webkit-transition-duration: 200ms;
+        }
+
+        .button {
+            float: right;
+        }
+
+        .current-player {
+            color: black !important;
+            -webkit-transform: scale(1.5);
+        }
+
+        .X-marker {
+            color: #663366;
+        }
+
+        .X-marker:before {
+            content: "X";
+        }
+
+        .O-marker {
+            color: #CC0033;
+        }
+
+        .O-marker:before {
+            content: "O";
+        }
+
+    </style>
+
+    <script src="scripts/jogo_da_velha.js"></script>
+
+</head>
+<body>
+
+
+<div id="players">
+    <div id="X" class="">Player X</div>
+    <div id="O" class="">Player O</div>
+    <input type="button" class="button" value="New Game">
+</div>
+
+<table>
+    <tr>
+        <td id="0" onclick="clickTeste(this.id)" value=""></td>
+        <td id="1" onclick="clickTeste(this.id)"></td>
+        <td id="2" onclick="clickTeste(this.id)"></td>
+    </tr>
+    <tr>
+        <td id="3" onclick="clickTeste(this.id)"></td>
+        <td id="4" onclick="clickTeste(this.id)"></td>
+        <td id="5" onclick="clickTeste(this.id)"></td>
+    </tr>
+    <tr>
+        <td id="6" onclick="clickTeste(this.id)"></td>
+        <td id="7" onclick="clickTeste(this.id)"></td>
+        <td id="8" onclick="clickTeste(this.id)"></td>
+    </tr>
+</table>
+
+</body>
+</html>

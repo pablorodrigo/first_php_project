@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+
+    </style>
+
+    <script>
+
+        function tabuada() {
+
+            var valor = parseInt(document.getElementById("valor").value);
+            //var resultados = document.createElement("p");
+            var resultados = "<table>";
+            var calculo;
+            console.log(valor);
+            for (var i = 1; i <= 10; i++) {
+
+                calculo = valor * i;
+
+                resultados +=
+                    " <tr>" +
+                    "<td>" + valor + "*" + i + "=" + calculo + "</td>" +
+                    "</tr>";
+
+
+            }
+            resultados += "</table>";
+            document.getElementById("resultados").innerHTML = resultados;
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+<form>
+    <div>
+
+        <input id="valor" type="number">
+        <button type="button" onclick="tabuada()">Tabuada</button>
+
+
+    </div>
+
+
+    <div id="resultados"></div>
+</form>
+<br>
+
+
+</body>
+</html>

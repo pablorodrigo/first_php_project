@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function submit() {
+            var count = 0;
+
+            if (document.getElementsByName("questao_1")[0].checked === true) {
+                count++;
+            }
+            if (document.getElementsByName("questao_2")[0].checked === true) {
+                count++;
+            }
+            if (document.getElementsByName("questao_3")[0].checked === true) {
+                count++;
+            }
+            if (document.getElementsByName("questao_4")[0].checked === true) {
+                count++;
+            }
+            if (document.getElementsByName("questao_5")[0].checked === true) {
+                count++;
+            }
+
+            //var questao_1 = parseInt(document.getElementsByName("questao_1").value);
+            document.getElementById("nota").innerHTML = "Nota = " + count;
+
+
+        }
+
+        function verificarQuestao1() {
+
+            document.getElementById("q5").style.display = "inline-block";
+
+        }
+
+        function verificarQuestao2() {
+
+            document.getElementById("q3_q4").style.display = null;
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+<div>
+    <form>
+
+        <div style="display: inline-block">
+            <p>Questao 1</p>
+            <label>
+                <input type="radio" name="questao_1" value="1" onclick="verificarQuestao1()">
+            </label><span>Opção 1</span><br>
+            <label>
+                <input type="radio" name="questao_1" value="2" onclick="verificarQuestao1()">
+            </label><span>Opção 2</span><br>
+        </div>
+
+        <div style="display: inline-block">
+            <p>Questao 2</p>
+            <label>
+                <input type="radio" name="questao_2" value="1" onclick="verificarQuestao2()">
+            </label><span>Opção 1</span><br>
+            <label>
+                <input type="radio" name="questao_2" value="2" onclick="verificarQuestao2()">
+            </label><span>Opção 2</span><br>
+        </div>
+
+        <br>
+
+        <div id="q3_q4" style="display: none">
+            <div style="display: inline-block">
+                <p>Questao 3</p>
+                <label>
+                    <input type="radio" name="questao_3" value="1">
+                </label><span>Opção 1</span><br>
+                <label>
+                    <input type="radio" name="questao_3" value="2">
+                </label><span>Opção 2</span><br>
+            </div>
+
+            <div style="display: inline-block">
+                <p>Questao 4</p>
+                <label>
+                    <input type="radio" name="questao_4" value="1">
+                </label><span>Opção 1</span><br>
+                <label>
+                    <input type="radio" name="questao_4" value="2">
+                </label><span>Opção 2</span><br>
+            </div>
+
+            <br>
+
+        </div>
+        <div id="q5" style="display: none">
+            <p>Questao 5</p>
+            <label>
+                <input type="radio" name="questao_5" value="1">
+            </label><span>Opção 1</span><br>
+            <label>
+                <input type="radio" name="questao_5" value="2">
+            </label><span>Opção 2</span><br>
+        </div>
+    </form>
+
+    <button type="button" onclick="submit()">Calcular</button>
+
+    <span id="nota">Nota : 0.0</span>
+
+</div>
+</body>
+</html>

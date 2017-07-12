@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function soma() {
+            var numX = parseInt(document.getElementById("x").value);
+            var numY = parseInt(document.getElementById("y").value);
+            var total = numX + numY;
+            document.getElementById("p1").innerHTML = "O resultado eh: " + total;
+        }
+    </script>
+
+</head>
+<body>
+
+<form>
+    X:<br>
+    <input type="number" id="x" value="0">
+    <br>
+    Y:<br>
+    <input type="number" id="y" value="0">
+    <br>
+    <button type="button" onclick="soma()">Soma</button>
+</form>
+<br>
+
+<p id="p1">O resultado ainda não foi calculado.</p>
+
+</body>
+</html>

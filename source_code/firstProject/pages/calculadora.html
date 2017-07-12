@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function soma() {
+            var numX = parseInt(document.getElementById("x").value);
+            var numY = parseInt(document.getElementById("y").value);
+            var total = numX + numY;
+            document.getElementById("operacao").innerHTML = "+";
+            document.getElementById("p1").innerHTML = "=" + total;
+
+        }
+
+        function sub() {
+            var numX = parseInt(document.getElementById("x").value);
+            var numY = parseInt(document.getElementById("y").value);
+            var total = numX - numY;
+            document.getElementById("operacao").innerHTML = "-";
+            document.getElementById("p1").innerHTML = "=" + total;
+        }
+
+        function multi() {
+            var numX = parseInt(document.getElementById("x").value);
+            var numY = parseInt(document.getElementById("y").value);
+            var total = numX * numY;
+            document.getElementById("operacao").innerHTML = "*";
+            document.getElementById("p1").innerHTML = "=" + total;
+        }
+
+        function div() {
+            var numX = parseInt(document.getElementById("x").value);
+            var numY = parseInt(document.getElementById("y").value);
+            var total = numX / numY;
+            document.getElementById("operacao").innerHTML = "/";
+            document.getElementById("p1").innerHTML = "=" + total;
+        }
+    </script>
+
+</head>
+<body>
+
+<form>
+    <div >
+        <span>X:</span>
+        <input type="number" id="x" value="0">
+
+        <span id="operacao">operacao</span>
+        <span>Y:</span>
+        <input type="number" id="y" value="0">
+        <span id="p1">= resultado</span>
+
+        <br><br>
+        <div style="word-spacing: 30px">
+            <button type="button" onclick="soma()">+</button>
+            <button type="button" onclick="sub()">-</button>
+            <button type="button" onclick="multi()">*</button>
+            <button type="button" onclick="div()">/</button>
+        </div>
+    </div>
+</form>
+<br>
+
+
+</body>
+</html>

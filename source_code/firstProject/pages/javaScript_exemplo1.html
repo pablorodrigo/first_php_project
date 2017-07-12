@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+    <script>
+        function myFunction1() {
+            document.getElementById("p1").innerHTML = "Java Cript no Head";
+        }
+    </script>
+
+</head>
+<body>
+
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+
+<button type="button" onclick="myFunction1()">Ativar JS Head</button>
+<button type="button" onclick="myFunction2()">Ativar JS Externo</button>
+
+<script>
+    document.getElementById("p2").innerHTML = "Java Script no Body";
+</script>
+<script src="Exemplo 1 - seintaxe JS.js"></script>
+
+
+</body>
+</html>
